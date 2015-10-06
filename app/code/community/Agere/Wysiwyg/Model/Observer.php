@@ -16,6 +16,7 @@ class Agere_Wysiwyg_Model_Observer extends Varien_Event_Observer {
 		$_helperOutput = Mage::helper('catalog/output');
 		$_helperFilter = Mage::helper('agere_wysiwyg/filter');
 		$_helperOutput->addHandler('categoryAttribute', $_helperFilter);
+		$_helperOutput->addHandler('productAttribute', $_helperFilter);
 	}
 
 }

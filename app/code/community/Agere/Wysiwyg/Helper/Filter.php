@@ -13,6 +13,14 @@
 class Agere_Wysiwyg_Helper_Filter extends Mage_Core_Helper_Abstract {
 
 	public function categoryAttribute($mainHelper, $result, $params) {
+		return $this->process($result);
+	}
+
+	public function productAttribute($mainHelper, $result, $params) {
+		return $this->process($result);
+	}
+
+	protected function process($result) {
 		/** @var Mage_Cms_Helper_Data $helperCms */
 		$helperCms = Mage::helper('cms');
 		$processor = $helperCms->getPageTemplateProcessor();
