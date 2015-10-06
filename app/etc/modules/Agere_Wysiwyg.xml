@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Agere_Wysiwyg>
+			<active>true</active>
+			<codePool>community</codePool>
+		</Agere_Wysiwyg>
+	</modules>
+</config>

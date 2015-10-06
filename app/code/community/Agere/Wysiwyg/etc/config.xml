@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Agere_Wysiwyg>
+			<version>1.0.0</version>
+		</Agere_Wysiwyg>
+	</modules>
+	<global>
+		<blocks>
+			<agere_wysiwyg>
+				<class>Agere_Wysiwyg_Block</class>
+			</agere_wysiwyg>
+
+			<adminhtml>
+				<rewrite>
+					<catalog_helper_form_wysiwyg_content>Agere_Wysiwyg_Block_Widget_Anywhere</catalog_helper_form_wysiwyg_content>
+				</rewrite>
+			</adminhtml>
+		</blocks>
+		<helpers>
+			<agere_wysiwyg>
+				<class>Agere_Wysiwyg_Helper</class>
+			</agere_wysiwyg>
+		</helpers>
+		<events>
+			<controller_front_init_before>
+				<observers>
+					<agere_add_wysiwyg_handler>
+						<type>singleton</type>
+						<class>Agere_Wysiwyg_Model_Observer</class>
+						<method>addWysiwygHandler</method>
+					</agere_add_wysiwyg_handler>
+				</observers>
+			</controller_front_init_before>
+		</events>
+	</global>
+</config>
